@@ -1,0 +1,190 @@
+// Tickets
+.tickets__title {
+  margin-bottom: 103px;
+}
+
+.tickets__inner {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.tickets__img {
+  max-width: 720px;
+  width: 50vw;
+  height: 100%;
+}
+
+.buy-options {
+  max-width: 660px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  color: $color-black;
+  font-weight: $font-weight-light;
+  font-size: $font-size-3;
+  line-height: 26px;
+}
+
+.buy-options__ticket-type {
+  display: flex;
+  flex-direction: column;
+}
+
+.buy-options__type-heading {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-2;
+  line-height: 33px;
+  margin-bottom: 51px;
+}
+
+.buy-options__item {
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  padding-bottom: 25px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.4s;
+  &:hover {
+    opacity: 0.65;
+  }
+}
+
+.buy-options__item:hover .buy-options__item-input ~ .checkmark {
+  opacity: 0.65;
+}
+
+.buy-options__item-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: $color-white;
+  border: 2px solid $color-black;
+  border-radius: 50%;
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}
+
+.buy-options__item input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.buy-options__item .checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $color-black;
+}
+
+.buy-options__amount-heading {
+  text-align: right;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-2;
+  line-height: 33px;
+  margin-bottom: 25px;
+}
+
+.buy-options__age {
+  margin-left: 24px;
+  margin-bottom: 14px;
+  font-weight: $font-weight-light;
+  font-size: $font-size-3;
+  line-height: 26px;
+}
+
+.buy-options__amount-change {
+  max-width: 150px;
+  min-height: 50px;
+  margin-left: auto;
+  margin-bottom: 12px;
+  border: 3px solid $color-black;
+  &:last-of-type  {
+    margin-bottom: 50px;
+  }
+}
+
+.buy-options__amount-change
+.amount-change {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount-change__button {
+  width: 18px;
+  height: 38px;
+  margin: 0 11px;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-1;
+  line-height: 37px;
+  text-align: center;
+  color: $color-black;
+  background-color: transparent;
+}
+
+.amount-change__number {
+  all: unset;
+  width: 50px;
+  text-align: center;
+  font-weight: $font-weight-light;
+  font-size: $font-size-3;
+  line-height: 26px;
+}
+
+.amount-change__number::-webkit-outer-spin-button,
+.amount-change__number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.amount-change__number {
+  -moz-appearance: textfield;
+}
+
+.buy-options__total {
+  margin-bottom: 60px;
+  text-align: right;
+  letter-spacing: 1.65px;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-2;
+  line-height: 33px;
+}
+
+.buy-options__buy-button {
+  padding: 12px 36px;
+  font-weight: $font-weight-light;
+  font-size: $font-size-3;
+  line-height: 26px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+  color: $color-white;
+  background-color: $color-black;
+  transition: ease-out 0.5s;
+  &:hover {
+    background-color: $color-gold;
+    color: $color-black;
+  }
+}
+
+
+// Parallax effect
+.parallax {
+  height: 400px;
+  background: url("../assets/img/parallax.jpeg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}

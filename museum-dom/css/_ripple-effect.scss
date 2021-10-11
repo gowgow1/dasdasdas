@@ -1,0 +1,35 @@
+.buy-options__buy-button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 36px;
+  font-weight: $font-weight-light;
+  font-size: $font-size-3;
+  line-height: 26px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+  overflow: hidden;
+  color: $color-white;
+  background-color: $color-black;
+}
+
+.buy-options__buy-button > .circle {
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: ripple 1s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}

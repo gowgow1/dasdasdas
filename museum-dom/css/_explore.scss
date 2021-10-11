@@ -1,0 +1,141 @@
+// Explore
+.explore__wrapper {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 60px;
+}
+
+.explore__description {
+  max-width: 660px;
+  width: 100%;
+}
+
+.explore__title {
+  margin-bottom: 105px;
+}
+
+.explore__text {
+  font-weight: $font-weight-light;
+  font-size: $font-size-3;
+  line-height: 38px;
+  margin-bottom: 25px;
+  &--gold {
+    color: $color-gold;
+  }
+}
+
+// .explore__img {
+//   position: relative;
+//   height: 700px;
+//   width: 720px;
+// }
+// .explore__img-wrapper {
+//   position: absolute;
+//   overflow: hidden;
+// }
+// .explore__image {
+//   display: block;
+//   max-width: 720px;
+//   width: 100%;
+//   height: 700px;
+//   &--after {
+//     transform: translateX(-3px);
+//   }
+// }
+// .explore__slider {
+//   display: none;
+//   position: absolute;
+//   top: 50%;
+//   left: 420px;
+//   transform: translateY(-50%);
+//   width: 39px;
+//   height: 39px;
+//   background-color: transparent;
+//   border-radius: 50%;
+//   border: 5px solid #ffffff;
+//   z-index: 1;
+//   cursor: ew-resize;
+//   &::before,
+//   &::after {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     width: 4px;
+//     height: 334px;
+//     background-color: #ffffff;
+//     z-index: 1;
+//   }
+//   &::before {
+//     top: 30px;
+//   }
+//   &::after {
+//     bottom: 30px;
+//   }
+// }
+
+
+// Explore slider
+.explore {
+  &__img {
+    position: relative;
+    margin-top: 15px;
+    height: auto;
+  }
+  &__img-after {
+    width: 100%;
+    height: auto;
+  }
+  &__img-after img,
+  &__img-before img {
+    min-width: 600px;
+    max-width: 720px;
+    width: 38vw;
+  }
+  &__img-before {
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+    width: 60%;
+  }
+  &__slider {
+    display: block;
+    position: absolute;
+    top: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background: none;
+    outline: none;
+    margin: 0;
+    transition: all .2s;
+    // cursor: pointer;
+    color: transparent;
+  }
+  &__line {
+    position: absolute;
+    left: 58%;
+    top: 0%;
+    height: 99.3%;
+    cursor: ew-resize;
+    pointer-events: none
+  }
+  &__line img {
+    height: 100%;
+  }
+  ::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6px;
+    height: 100%;
+    background: white;
+    cursor: pointer;
+  }
+}
+
+

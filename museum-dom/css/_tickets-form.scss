@@ -1,0 +1,508 @@
+// Booking tickets form
+.booking {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 99999;
+  top: 0;
+  left: -3000px;
+  animation: openPopup 0.8s ease forwards;
+  // transition: all .5s;
+  // background-color: rgba(0,0,0,0.4);
+  &__wrapper {
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+    margin: 110px auto;
+    padding: 91px 0;
+    background-color: $color-white; 
+    box-shadow: 0 0 0 50vmax rgba(0,0,0,.7);
+  }
+  .close-button {
+    content: "";
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    transition: all 0.5s;
+    width: 25px;
+    height: 25px;
+    background: url("../assets/img/tickets/close.svg") no-repeat center;
+    cursor: pointer;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    opacity: .7;
+  }
+  &__logo {
+    width: 85px;
+    height: 41px;
+    background: url("../assets/img/tickets/logo.svg") no-repeat center;
+  }
+  &__title {
+    color: $color-gold;
+    font-family: $font-title;
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: $font-weight-regular;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-family: $font-body;
+    font-size: 18px;
+    line-height: 21px;
+    color: $color-red;
+    margin: 13px 0 60px 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid $color-red;
+  }
+  &__columns {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.booking__columns-left {
+  max-width: 400px;
+  width: 100%;
+  margin-right: 40px;
+}
+
+.booking__form {
+  display: flex;
+  flex-direction: column;
+  .form-input {
+    padding: 11px 15px;
+    margin-bottom: 20px;
+    font-family: $font-body;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-4;
+    text-indent: 30px;
+    line-height: 21px;
+    color: $color-black;
+    border: 1px solid #030303;
+    &::placeholder { 
+      color: $color-black;
+      font-family: $font-body;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-4;
+      line-height: 21px;
+    }
+    &:focus {
+      outline: none;
+      // border-color: #030303;
+      box-shadow: 0 0 5px #4b4b4b8c;
+    }
+    // .form-input:valid {
+    //   border-color: #87d119;
+    // }
+    // .form-input:invalid {
+    //   border-color: #d13519;
+    // }
+    // .form-input:not(:focus):invalid {
+    //   border-color: #030303;
+    // }
+    &--date {
+      background: url("../assets/img/tickets/date.svg") no-repeat 15px 15px, url("../assets/img/tickets/arrow.svg") no-repeat 157px 13px;
+    }
+    &--time {
+      background: url("../assets/img/tickets/time.svg") no-repeat 15px 15px, url("../assets/img/tickets/arrow.svg") no-repeat 157px 13px;
+    }
+    &--name {
+      background: url("../assets/img/tickets/name.svg") no-repeat 15px 15px;
+    }
+    &--mail{
+      background: url("../assets/img/tickets/email.svg") no-repeat 15px 16px;
+    }
+    &--phone {
+      background: url("../assets/img/tickets/tel.svg") no-repeat 15px 10px;
+    }
+    &--type {
+      -webkit-appearance: none;
+      background-color: transparent;
+      overflow: visible;
+      width: 100%;
+      background: url("../assets/img/tickets/ballot.svg") no-repeat 15px 14px, url("../assets/img/tickets/arrow.svg") no-repeat 367px 13px;
+    }
+  }
+  .form-input[type="date"],
+  .form-input[type="time"] {
+    text-indent: 15px;
+  }
+}
+
+// input::-webkit-datetime-edit,
+// input::-webkit-inner-spin-button,
+// input::-webkit-clear-button {
+//   // display: none;
+//   color: transparent;
+// }
+input::-webkit-calendar-picker-indicator {
+  // display: none;
+  visibility: hidden;
+  color: transparent;
+}
+
+input[type=time]::-webkit-clear-button,
+input[type=time]::-webkit-outer-spin-button,
+input[type=time]::-webkit-inner-spin-button {
+    // display:none;
+    color: transparent;
+}
+// input::-webkit-datetime-edit {
+//   color: transparent; 
+// }
+// input:focus::-webkit-datetime-edit {
+//  color: rgba(255, 255, 255, .46) !important; 
+// }
+
+.form__wrapper-first {
+  display: flex;
+  justify-content: space-between;
+  .form-input {
+      max-width: 190px;
+      width: 100%;
+  }
+}
+
+
+.form__wrapper-second {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-ticket {
+  padding: 10px 15px 15px;
+  border: 1px solid $color-black;
+  &__title {
+    position: relative;
+    margin-bottom: 22px;
+    font-family: $font-title;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-4;
+    line-height: 20px;
+    color: $color-gold;
+    text-transform: capitalize;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: $color-red;
+    }
+  }
+  &__age {
+    color: $color-black;
+    font-family: $font-body;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-4;
+    line-height: 21px;
+  }
+  &__amount {
+    display: flex;
+    flex-direction: column;
+  }
+  &__amount-change {
+    border: 1px solid $color-black;
+  }
+  .amount-change__number {
+    width: 30px;
+    color: $color-black;
+    font-family: $font-body;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-4;
+    line-height: 21px;
+  }
+  .amount-change__button {
+  width: 31px;
+  height: 22px;
+  margin: 0;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-4;
+  line-height: 0px;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-black;
+  }
+  &__amount-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:first-child {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+// Right column
+.booking__columns-right {
+  border: 1px solid $color-black;
+  max-width: 529px;
+  width: 100%;
+  padding: 25px 28px 24px 29px;
+}
+
+.overview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 9px;
+  &__title {
+    margin-bottom: 3px;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-1;
+    line-height: 37px;
+    color:#272727;
+  }
+  &__description {
+    margin-bottom: 10px;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-3;
+    line-height: 26px;
+    color: $color-red;
+    opacity: 0.9;
+  }
+  &__item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    font-weight: $font-weight-light;
+    font-size: $font-size-4;
+    line-height: 21px;
+    color: $color-black;
+  }
+  &__item--date::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    top: 2px;
+    background: url("../assets/img/tickets/date.svg") no-repeat center;
+  }
+  &__item--time::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    top: 4px;
+    background: url("../assets/img/tickets/time.svg") no-repeat center;
+  }
+  &__item--type::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    top: 4px;
+    background: url("../assets/img/tickets/tick.svg") no-repeat center;
+  }
+  &__image {
+    margin-top: -1px;
+  }
+}
+
+.total {
+  margin-bottom: 10px;
+  &__add {
+    padding-bottom: 2px;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-3;
+    line-height: 26px;
+    color: $color-black;
+    border-bottom: 3px solid $color-red;
+  }
+  &__add-elem {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__add-text {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 6px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 32px;
+      height: 20px;
+      left: 0;
+      top: 2px;
+      background: url("../assets/img/tickets/total-two.svg") no-repeat center;
+    }
+  }
+  &__sum {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-1;
+    line-height: 37px;
+    color: $color-black;
+  }
+  &__sum-number {
+    font-weight: $font-weight-bold;
+  }
+  // &__card {
+  //   margin-bottom: 22px;
+  // }
+  // &__card-image--2,
+  // &__card-image--3 {
+  //   display: none;
+  // }
+}
+
+.total__card {
+  position: relative;
+  margin-bottom: 55px;
+  .card_up label,
+  .expiration-label {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 5px;
+  }
+  .card-number input,
+  .expiration-date select,
+  .cardholder-name input {
+    height: 35px;
+  }
+
+  .card_up {
+    max-width: 360px;
+    border-radius: 5px;
+    height: 211px;
+    background-color: #BCBCBC;
+    width: 100%;
+    padding: 15px 20px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 20;
+  }
+
+  .visa-img {
+    position: absolute;
+    top: 16%;
+    right: 7%;
+  }
+
+  .mastercard-img {
+    position: absolute;
+    top: 30%;
+    right: 7%;
+  }
+
+  .card-number,
+  .cardholder-name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-number,
+  .expiration-date {
+    max-width: 67%;
+    width: 100%;
+  }
+
+  .expiration-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .expiration-date-selections {
+    display: flex;
+    justify-content: space-between;
+    gap: 15%;
+  }
+
+  .expiration-month,
+  .expiration-year {
+    width: 100%;
+  }
+
+  .card_down {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    max-width: 360px;
+    width: 100%;
+    background-color: #939393;
+    height: 211px;
+    border-radius: 5px;
+  }
+
+  .black-line {
+    width: 100%;
+    height: 45px;
+    background-color: #030303;
+    margin: 25px 0 15px 0;
+  }
+
+  .card_down_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cvv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    max-width: 75px;
+    width: 100%;
+    margin-right: 20px;
+  }
+  .cvv input {
+    margin: 5px 0;
+    width: 100%;
+    height: 35px;
+  }
+  .cvv label {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .cvv p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+.booking__button {
+  display: block;
+  margin-left: auto;
+  padding: 10px 25px;
+  max-width: 218px;
+  width: 100%;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-3;
+  line-height: 26px;
+  color: $color-white;
+  background-color: $color-red;
+  margin-right: 0;
+}
+
+
+// Animation open and close
+@keyframes openPopup {
+  0% {
+  }
+  100% {
+    transform: translateX(3000px);
+  }
+}
+
+// @keyframes closePopup {
+//   0% {
+//   }
+//   100% {
+//     transform: translateX(-3000px);
+//   }
+// }

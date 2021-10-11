@@ -1,0 +1,89 @@
+/*========== GLOBAL ==========*/
+*, 
+::before, 
+::after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  color: $color-white;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+// To all sections
+.section {
+  padding: 75px 0;
+    &--dark {
+    background-color: $color-dark;
+    color: $color-white;
+    }
+}
+
+.section__title {
+  font-family: $font-title;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-title;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: $color-gold;
+  &--dark {
+    color: $color-white;
+  }
+  &--underlined {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -28px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: $color-red;
+    }
+  }
+}

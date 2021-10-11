@@ -1,0 +1,388 @@
+// For Mobile screen max 420px width
+@media (max-width: 420px) {
+    // Global
+    .header,
+    .main,
+    .footer {
+      width: 420px;
+    }
+    .section__title {
+      width: 100%;
+      font-size: 28px;
+      line-height: 40px;
+    }
+    .section__title--underlined::after {
+      bottom: -23px;
+      left: 0;
+      right: 0;
+    }
+    .container {
+      max-width: 380px;
+      width: 100%;
+      padding: 0;
+    }
+    // Header
+    .header {
+      padding: 31px 0 35px;
+    }
+    .logo {
+      align-items: center;
+      &__heading {
+        font-size: 16px;
+        line-height: 18px;
+      }
+      &__img {
+        height: 20px;
+        margin-right: 5px;
+        background: url("../assets/svg/logo-mob.svg") no-repeat;
+      }
+    }
+    .header__nav-mobile {
+      .nav__image {
+        &--1 {
+          flex: 1 1 20%;
+          height: 95px;
+          background-image: url("../assets/img/header/nav-image-4.jpg");
+        }
+        &--2 {
+          flex: 1 1 20%;
+          height: 95px;
+          background-image: url("../assets/img/header/nav-image-5.jpg");
+        }
+        &--3 {
+          flex: 1 1 20%;
+          height: 95px;
+          background-image: url("../assets/img/header/nav-image-6.jpg");
+        }
+      }
+      .nav__images {
+        padding-bottom: 20px;
+        gap: 12px;
+      }
+      .nav__list {
+        padding: 45px 55px 10px;
+      }
+      .nav__link {
+        font-size: 20px;
+        line-height: 23px;
+        &::after {
+          left: 165px;
+        }
+      }
+      .social {
+        padding: 24px 0;
+        &__item {
+          margin: 0 3px;
+        }
+      }
+    }
+    // Welcome
+    .welcome {
+      padding-bottom: 39px;
+      &__content {
+        margin-bottom: 50px;
+      }
+      &__title {
+        max-width: 280px;
+      }
+      &__description {
+        font-size: 16px;
+        line-height: 19px;
+      }
+      &__slider {
+        height: 326px;
+      }
+      .slider {
+        height: 70px;
+        bottom: -34px;
+        padding: 0 73px 0 74px;
+      }
+      .slider__pagination-item:not(:last-child) {
+        margin-right: 10px;
+      }
+      .slider__counts > span {
+        font-size: 16px;
+      }
+      .slider__pagination-item {
+        width: 7px;
+        height: 7px;
+      }
+      .slider-arrow {
+        width: 20px;
+      }
+      .count-delimiter {
+        height: 13px;
+        margin: 0 7px;
+      }
+    }
+    // Explore
+    .explore {
+      padding: 40px 0 34px;
+      &__description {
+        margin-bottom: 63px;
+      }
+      // &__img {
+      //   width: 100%;
+      //   height: 360px;
+      // }
+      // &__image {
+      //   max-width: 380px;
+      //   height: 368px;
+      // }
+      &__img-after img,
+      &__img-before img {
+        min-width: 378px;
+        max-width: 380px;
+        width: 100%;
+      }
+      &__line {
+        height: 99%;
+      }
+    }
+    // Visiting
+    .visiting {
+      padding: 40px 0;
+      &__cards {
+        row-gap: 36px;
+      }
+    }
+    .card {
+      &__title {
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 5px;
+      }
+      &__title::after {
+        bottom: -7px;
+      }
+      &__text {
+        font-size: 16px;
+        line-height: 19px;
+      }
+      &__img {
+        margin-bottom: 17px;
+      }
+    }
+    // Video
+    .video {
+      padding-bottom: 33px;
+      &__poster {
+        height: 176px;
+      }
+      &__description {
+        margin-bottom: 16px;
+      }
+      &__btn-play-big {
+        top: 50%;
+        background-size: 23%;
+      }
+      &__slider-item {
+        width: 8px;
+        height: 8px;
+        margin-left: 16px;
+      }
+    }
+    .control-panel {
+      padding: 0 2px 0 20px;
+      height: 50px;
+      &__btn--play {
+        height: 17px;
+        margin-top: 0;
+        background-size: 14px;
+      }
+      &__btn--volume {
+        margin-top: 0;
+        width: 26px;
+        height: 15px;
+        background-size: 18px;
+      }
+      &__indicator {
+        height: 4px;
+      } 
+      &__indicator--volume {
+        width: 60px;
+        margin-top: 0;
+      }
+      &__indicator--progress {
+        max-width: 165px;
+        margin-top: 0;
+      }
+      &__btn--fullscreen {
+        height: 18px;
+        margin-top: 0;
+        background-size: 18px;
+      }
+    }
+    .videos {
+      padding: 40px 0 35px;
+      &__iframe {
+        max-width: 180px;
+        height: 101px;
+      }
+    }
+    // Gallery
+    .gallery {
+      height: 757px;
+      &__wrapper {
+        grid-row-gap: 12px;
+      }
+    }
+    // Tickets
+    .tickets {
+      &__inner {
+        flex-direction: column;
+      }
+      &__img {
+        height: 160px;
+      }
+    }
+    .buy-options {
+      max-width: 100%;
+      margin-top: 40px;
+      justify-content: center;
+      &__amount {
+        margin: 0 auto;
+      }
+      &__amount-heading {
+        margin-bottom: 21px;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+      }
+      &__amount-change {
+        margin-bottom: 21px;
+      }
+      &__age {
+        margin-bottom: 14px;
+        font-size: 16px;
+        line-height: 19px;
+      }
+      &__total {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0;
+        text-align: center;
+        margin-bottom: 41px;
+      }
+      .total-price {
+        margin-left: 0;
+      }
+      &__buy-button {
+        padding: 12px 48px;
+        font-size: 16px;
+      }
+    }
+    .booking {
+      &__wrapper {
+        padding: 87px 0;
+      }
+      &__columns {
+        padding: 0 30px;
+      }
+      &__title {
+        font-size: 32px;
+        line-height: 35px;
+      }
+      .form__wrapper-first {
+        flex-direction: column;
+        .form-input {
+          max-width: 100%;
+        }
+      }
+      .form-input--date {
+        background: url(../assets/img/tickets/date.svg) no-repeat 15px 15px, url(../assets/img/tickets/arrow.svg) no-repeat 325px 12px;
+      }
+      .form-input--time {
+        background: url(../assets/img/tickets/time.svg) no-repeat 15px 15px, url(../assets/img/tickets/arrow.svg) no-repeat 325px 14px;
+      }
+      .form-input--type {
+        background: url(../assets/img/tickets/ballot.svg) no-repeat 15px 14px, url(../assets/img/tickets/arrow.svg) no-repeat 327px 13px;
+      }
+      &__columns-right {
+        padding: 23px 15px 24px 15px;
+      }
+      .overview {
+        &__image {
+          max-width: 120px;
+          width: 100%;
+          height: auto;
+        }
+      }
+      .total {
+        &__sum {
+          padding: 10px 0 15px;
+        }
+        &__card {
+          margin-bottom: 40px;
+        }
+        &__card-image {
+          max-width: 330px;
+          width: 100%;
+          height: 209px;
+        }
+        &__card-image--1 {
+          display: none;
+        }
+        &__card-image--2,
+        &__card-image--3 {
+          display: block;
+        }
+        &__card-image--2 {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    // Contacts
+    .contacts {
+      padding: 40px 0;
+      &__heading {
+        font-size: 16px;
+        line-height: 19px;
+      }
+      &__item {
+        font-size: 16px;
+        line-height: 19px;
+      }
+      .map {
+        max-width: 380px;
+        height: 248px;
+      }
+    }
+    // Footer
+    .footer {
+      &__top-left {
+        max-width: 100%;
+        flex-direction: column;
+        margin-bottom: 23px;
+      }
+      .nav {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 25px;
+        &__list {
+          width: 100%;
+          max-height: 145px;
+          margin: 0 auto;
+        }
+      }
+      .social {
+        margin: 0 auto;
+        &__list {
+          justify-content: center;
+        }
+        &__item {
+          margin: 0 3px;
+        }
+      }
+      &__bottom {
+        padding-top: 39px;
+      }
+      &__rs {
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .rs__school {
+        display: none;
+      }
+    }
+}

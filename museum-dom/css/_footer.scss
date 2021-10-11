@@ -1,0 +1,120 @@
+// Footer
+.footer {
+  padding: 76px 0 0;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  // column-gap: 50px;
+  padding-bottom: 39px;
+}
+
+.footer__top-left {
+  max-width: 705px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // column-gap: 50px;
+}
+
+.footer__logo {
+  align-self: flex-start;
+  margin-right: 197px;
+}
+
+.footer__nav {
+  max-width: 366px;
+  width: 100%;
+}
+
+.footer__nav-list {
+  width: 358px;
+  max-height: 150px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  // column-gap: 50px;
+  align-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__social {
+  align-self: flex-end;
+  max-width: 340px;
+  width: 100%;
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.social__link {
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  border: 1px solid $color-gray-dark;
+  border-radius: 50%;
+  transition: ease-out 0.3s;
+  &--youtube {
+    background: url("../assets/svg/youtube.svg") no-repeat center;
+  }
+  &--instagram {
+    background: url("../assets/svg/instagram.svg") no-repeat center;
+  }
+  
+  &--facebook {
+    background: url("../assets/svg/facebook.svg") no-repeat center;
+  }
+  
+  &--twitter {
+    background: url("../assets/svg/twitter.svg") no-repeat center;
+  }
+  
+  &--pinterest {
+    background: url("../assets/svg/pinterest.svg") no-repeat center;
+  }
+  &:hover {
+    filter: invert(52%) sepia(37%) saturate(302%) hue-rotate(356deg) brightness(96%) contrast(93%);
+  }
+}
+
+.footer__bottom {
+  padding: 52px 0 50px;
+  border-top: 3px solid $color-gray-dark;
+}
+
+.footer__rs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-weight: $font-weight-thin;
+  font-size: $font-size-3;
+  line-height: 22px;
+  letter-spacing: 2px;
+}
+
+.rs__school {
+  padding-left: 30px;
+  &-link {
+    color: $color-white;
+    transition: ease-out 0.3s;
+    &:hover {
+      color: $color-gold;
+    }
+  }
+}
+
+.rs__user-link {
+  color: $color-white;
+  transition: ease-out 0.3s;
+  &:hover {
+    color: $color-gold;
+  }
+}

@@ -1,0 +1,30 @@
+.scrolltop {
+  position: fixed;
+  right: 1.25rem;
+  bottom: -30%;
+  padding: .3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: $color-gold;
+  border-radius: 50%;
+  transition: all .5s;
+  /* visibility: hidden; */
+  z-index: 99;
+  .scrolltop__icon {
+    color: $color-white;
+  }
+  &:hover {
+    background-color: $color-white;
+    border: 1px solid $color-gold;
+  }
+  &:hover .scrolltop__icon {
+    color: $color-gold;
+  }
+}
+
+.show-scroll {
+  visibility: visible;
+  bottom: 3rem;
+}
